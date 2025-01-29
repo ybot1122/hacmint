@@ -1,0 +1,113 @@
+---
+const slides = [
+  {
+    id: 1,
+    text: "Blessed are those who HUNGER and THIRST for righteousness, for they will be filled.",
+    cite: "Matthew 5:6",
+  },
+  {
+    id: 2,
+    text: "You will SEEK ME and FIND ME when you seek me with your whole HEART",
+    cite: "Jeremiah 29:13",
+  },
+  {
+    id: 3,
+    text: "For this reason I remind you to fan into flame the gift of God, which is in you through the laying on of my hands.",
+    cite: "2 Timothy 1:6",
+  },
+];
+---
+
+<style>
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    margin: 2em 5em;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    display: none;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+</style>
+
+<div class="carousel">
+  <div class="carousel-inner" id="carousel-inner">
+    {
+      slides.map((slide) => (
+        <div class="carousel-item">
+          <p>{slide.text}</p>
+          <p>{slide.cite}</p>
+        </div>
+      ))
+    }
+  </div>
+  <button id="carousel-prev" class="carousel-control prev" onclick="prevSlide()"
+    >&#10094;</button
+  >
+  <button id="carousel-next" class="carousel-control next" onclick="nextSlide()"
+    >&#10095;</button
+  >
+</div>
+
+<script>
+  let currentSlide = 0;
+
+  function showSlide(index: number) {
+    const items = document.querySelectorAll(".carousel-item");
+    if (index >= items.length) currentSlide = 0;
+    if (index < 0) currentSlide = items.length - 1;
+    items.forEach((item, i) => {
+      (item as HTMLElement).style.display =
+        i === currentSlide ? "block" : "none";
+    });
+  }
+
+  function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+  }
+
+  function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+  }
+
+  document
+    .getElementById("carousel-prev")!
+    .addEventListener("click", prevSlide);
+  document
+    .getElementById("carousel-next")!
+    .addEventListener("click", nextSlide);
+
+  // Initialize the first slide
+  showSlide(currentSlide);
+</script>
