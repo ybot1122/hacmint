@@ -1,11 +1,28 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ScriptureCarousel from "../components/ScriptureCarousel.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <h1>Welcome to The Hearts Ablaze Christian Ministries International</h1>
+    <ScriptureCarousel />
+    <img
+      src="2024_summer_renewal_conference.jpg"
+      alt="2024 Summer Renewal Conference"
+    />
+  </main>
 </Layout>
+
+<style>
+  main {
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    max-width: 1024px;
+    height: auto;
+    margin: 2em auto;
+  }
+</style>
