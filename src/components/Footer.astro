@@ -47,7 +47,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1024px;
-    margin: 2em auto;
+    margin: 5em auto 2em auto;
     flex-wrap: wrap;
     gap: 1em;
   }
@@ -61,14 +61,17 @@
     }
   }
 
-  h3 a,
-  h3 a.active {
+  div:first-child a,
+  div:first-child a.visited,
+  div:first-child a.active {
     text-decoration: none;
   }
 
-  footer a,
-  footer a.active {
-    color: black;
+  div a,
+  div a.visited,
+  div a.active {
+    text-decoration: underline;
+    color: var(--black);
   }
 
   footer > div:first-child {
