@@ -61,9 +61,17 @@
     }
   }
 
-  h3 a,
-  h3 a.active {
+  div:first-child a,
+  div:first-child a.visited,
+  div:first-child a.active {
     text-decoration: none;
+  }
+
+  div a,
+  div a.visited,
+  div a.active {
+    text-decoration: underline;
+    color: var(--black);
   }
 
   footer > div:first-child {

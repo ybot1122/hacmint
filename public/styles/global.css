@@ -8,22 +8,8 @@
 	--textPrimary: #000000;
 	--accent: red;
 }
-@font-face {
-	font-family: 'Liter-Regular';
-	src: url('/fonts/Liter-Regular.ttf') format('truetype');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Liter-Regular';
-	src: url('/fonts/Liter-Regular.ttf') format('truetype');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
 body {
-	font-family: 'Liter-Regular', sans-serif;
+	font-family: 'Outfit', sans-serif, serif;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	font-size: 20px;
