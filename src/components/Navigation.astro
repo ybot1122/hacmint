@@ -26,8 +26,11 @@ import HeaderLink from "./HeaderLink.astro";
   </nav>
 </header>
 <style>
+  header {
+    margin: 0 1em 3em 1em;
+  }
   img {
-    margin: 1em 0;
+    margin: 0;
   }
   h2 a,
   h2 a.active {
@@ -38,17 +41,18 @@ import HeaderLink from "./HeaderLink.astro";
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1024px;
+    max-width: 1280px;
     margin: 0 auto;
+    font-size: 1em;
   }
   nav .logo {
     display: flex;
-
+    font-size: 1em;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     nav .logo {
       width: auto;
     }
@@ -57,7 +61,7 @@ import HeaderLink from "./HeaderLink.astro";
     width: 100%;
     text-align: center;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     nav .internal-links {
       width: auto;
     }
@@ -82,10 +86,10 @@ import HeaderLink from "./HeaderLink.astro";
   h2 {
     display: inline-block;
     font-size: 1em;
-    margin: 1em 0 0 0;
+    margin: 0;
     text-align: center;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1280px) {
     h2 {
       margin: 0;
       width: auto;
